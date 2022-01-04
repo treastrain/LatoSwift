@@ -1,3 +1,4 @@
+import Lato
 import UIKit
 import SwiftUI
 
@@ -71,7 +72,7 @@ public enum Lato {
 
 final private class FontLoader {
     class func load(fontName: String) {
-        guard let url = Bundle.module.url(forResource: fontName, withExtension: "ttf") else {
+        guard let url = Bundle.fonts.url(forResource: fontName, withExtension: "ttf") else {
             return
         }
         guard let fontDataProvider = CGDataProvider(url: url as CFURL) else {

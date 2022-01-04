@@ -10,12 +10,15 @@ let package = Package(
             name: "LatoSwift",
             targets: ["LatoSwift"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(
+            name: "Lato",
+            path: "./Fonts"),
+    ],
     targets: [
         .target(
             name: "LatoSwift",
-            dependencies: [],
-            resources: [.process("Fonts")]
+            dependencies: ["Lato"]
         ),
         .testTarget(
             name: "LatoTests",
