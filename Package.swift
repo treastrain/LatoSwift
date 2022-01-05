@@ -1,5 +1,6 @@
 // swift-tools-version:5.5
 
+import Foundation
 import PackageDescription
 
 let package = Package(
@@ -13,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(
             name: "Lato",
-            path: "./Fonts"),
+            path: URL(fileURLWithPath: #filePath).deletingLastPathComponent().appendingPathComponent("Fonts").absoluteString),
     ],
     targets: [
         .target(
